@@ -34,3 +34,19 @@ footer {
     background-color: #ffffff;
     font-size: 14px;
 }
+.theme-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.theme {
+    background-color: #eeeeee;
+    color: #333;
+}
+
+.theme:hover {
+    background-color: #dddddd;
+}
