@@ -1,7 +1,12 @@
-const startBtn = document.getElementById("startBtn");
-const themesSection = document.getElementById("themes");
+const boton = document.getElementById("btnToggle");
+const descripcion = document.getElementById("descripcion");
 
-startBtn.addEventListener("click", () => {
-    startBtn.style.display = "none";
-    themesSection.style.display = "block";
+boton.addEventListener("click", () => {
+  descripcion.classList.toggle("oculto");
+
+  if (descripcion.classList.contains("oculto")) {
+    boton.textContent = "Mostrar descripción";
+  } else {
+    boton.textContent = "Ocultar descripción";
+  }
 });
