@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Ventana Matemática</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Math Window</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <header>
-    <h1>Ventana Matemática</h1>
-    <p>Plataforma interactiva para aprender matemáticas por niveles</p>
-</header>
+  <!-- PANTALLA DE INICIO -->
+  <section id="inicio" class="pantalla activa">
+    <h1>Math Window</h1>
+    <p>Aprende matemáticas y física paso a paso</p>
+    <button id="btnEmpezar">Empezar</button>
+  </section>
 
-<main>
-    <section id="themes" style="display: none;">
-    <h2>Selecciona un tema</h2>
+  <!-- PANTALLA DE MATERIAS -->
+  <section id="materias" class="pantalla">
+    <h2>Selecciona una materia</h2>
+    <div id="contenedorMaterias"></div>
+  </section>
 
-    <div class="theme-list">
-        <button class="theme">Álgebra</button>
-        <button class="theme">Funciones</button>
-        <button class="theme">Geometría</button>
-        <button class="theme">Probabilidad</button>
-    </div>
-</section>
-    <button id="startBtn">Comenzar</button>
-</main>
+  <!-- PANTALLA DE TEMAS -->
+  <section id="temas" class="pantalla">
+    <h2 id="tituloMateria"></h2>
+    <div id="contenedorTemas"></div>
+    <button id="btnVolver">Volver</button>
+  </section>
 
-<footer>
-    <p>Proyecto educativo — Rode</p>
-</footer>
-    
+  <script src="js/script.js"></script>
 </body>
 </html>
