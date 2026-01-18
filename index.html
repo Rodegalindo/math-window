@@ -8,17 +8,38 @@
 </head>
 
 <body>
-  <div class="container">
+
+  <!-- PANTALLA 1: PORTADA -->
+  <section id="home" class="screen active">
     <h1>Math Window</h1>
     <p>Preparación matemática y física para ingeniería</p>
-
     <button id="startBtn">Comenzar</button>
+  </section>
 
-    <div id="areas" class="hidden">
-      <div class="card">Matemáticas</div>
-      <div class="card">Física</div>
+  <!-- PANTALLA 2: CATEGORÍAS -->
+  <section id="categories" class="screen">
+    
+    <div class="category">
+      <h2 class="category-title">Matemáticas</h2>
+      <ul class="topics">
+        <li>Álgebra</li>
+        <li>Funciones</li>
+        <li>Trigonometría</li>
+        <li>Pre-Cálculo</li>
+      </ul>
     </div>
-  </div>
+
+    <div class="category">
+      <h2 class="category-title">Física</h2>
+      <ul class="topics">
+        <li>Cinemática</li>
+        <li>Dinámica</li>
+        <li>Trabajo y Energía</li>
+        <li>Electricidad</li>
+      </ul>
+    </div>
+
+  </section>
 
   <script src="script.js"></script>
 </body>
