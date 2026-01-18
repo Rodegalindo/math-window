@@ -9,14 +9,31 @@ body {
   background-color: #0b1020;
   color: #e6e8ee;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 }
 
-.container {
-  text-align: center;
-  max-width: 600px;
+/* Pantallas */
+.screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateY(-30px);
+  pointer-events: none;
+
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.screen.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 h1 {
@@ -43,24 +60,31 @@ button:hover {
   background-color: #2563eb;
 }
 
-#areas {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+/* Categorías */
+.category {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
 }
 
-.card {
+.category-title {
   background-color: #121b2f;
-  padding: 20px 30px;
+  padding: 15px;
   border-radius: 8px;
   cursor: pointer;
 }
 
-.card:hover {
-  background-color: #1a2238;
+.topics {
+  list-style: none;
+  margin-top: 10px;
+  padding-left: 15px;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
-.hidden {
-  display: none;
+.topics li {
+  padding: 8px 0;
+  color: #aab0c0;
 }
