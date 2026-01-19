@@ -24,3 +24,7 @@ titles.forEach(title => {
     }
   });
 });
+
+function irATema(nombreTema) {
+  window.location.href = `tema.html?tema=${nombreTema}`;
+}
