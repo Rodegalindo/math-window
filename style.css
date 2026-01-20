@@ -137,3 +137,9 @@ button:active {
 .topics li:active {
   transform: scale(0.97);
 }
+
+/* Transición entre páginas */
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
