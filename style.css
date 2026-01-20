@@ -5,15 +5,19 @@
   font-family: Arial, sans-serif;
 }
 
+/* ===================== */
+/* BODY GLOBAL */
+/* ===================== */
+
 body {
   background-color: #0b1020;
   color: #e6e8ee;
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ===================== */
-/* PANTALLAS */
+/* PANTALLAS TIPO APP */
 /* ===================== */
 
 .screen {
@@ -99,7 +103,7 @@ button:active {
 }
 
 /* ===================== */
-/* TEMAS (INTERACTUABLES) */
+/* TEMAS */
 /* ===================== */
 
 .topics {
@@ -126,38 +130,40 @@ button:active {
     color 0.25s ease;
 }
 
-/* Hover claro + movimiento suave */
 .topics li:hover {
   background-color: #1e293b;
   color: #e6e8ee;
   transform: translateX(4px);
 }
 
-/* Feedback al click */
 .topics li:active {
   transform: scale(0.97);
 }
 
-/* Transición entre páginas */
+/* ===================== */
+/* TRANSICIÓN ENTRE PÁGINAS */
+/* ===================== */
+
 .page-transition {
   opacity: 0;
   transition: opacity 0.35s ease;
 }
 
-/* ===== PANTALLA DE TEMA ===== */
+/* ===================== */
+/* PÁGINA DE CADA TEMA */
+/* ===================== */
 
 .tema-body {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: #0f172a;
   color: white;
+  overflow-y: auto;
 }
 
 .tema-container {
   width: 100%;
   max-width: 900px;
+  margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
 }
@@ -167,7 +173,10 @@ button:active {
   font-size: 2rem;
 }
 
-/* Grilla de niveles */
+/* ===================== */
+/* GRILLA DE NIVELES */
+/* ===================== */
+
 .niveles {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -189,9 +198,13 @@ button:active {
   background: #334155;
 }
 
-/* Botón volver */
+/* ===================== */
+/* BOTÓN VOLVER */
+/* ===================== */
+
 .btn-volver {
-  margin: 40px 0 20px;
+  display: block;
+  margin: 50px auto 20px;
   padding: 12px 30px;
   border: none;
   border-radius: 20px;
@@ -203,4 +216,14 @@ button:active {
 
 .btn-volver:hover {
   background: #0ea5e9;
+}
+
+/* ===================== */
+/* RESPONSIVE (MÓVIL) */
+/* ===================== */
+
+@media (max-width: 600px) {
+  .niveles {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
