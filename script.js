@@ -1,16 +1,26 @@
 const startBtn = document.getElementById("startBtn");
 const home = document.getElementById("home");
 const categories = document.getElementById("categories");
+const tema = document.getElementById("tema");
+const temaTitulo = document.getElementById("tema-titulo");
 
-startBtn.addEventListener("click", () => {
-  home.classList.remove("active");
+// ---- FUNCIÓN GENERAL PARA CAMBIAR DE PANTALLA ----
+function mostrarPantalla(pantalla) {
+  document.querySelectorAll(".screen").forEach(sec => {
+    sec.classList.remove("active");
+  });
 
   setTimeout(() => {
-    categories.classList.add("active");
-  }, 400);
+    pantalla.classList.add("active");
+  }, 50);
+}
+
+// ---- BOTÓN COMENZAR ----
+startBtn.addEventListener("click", () => {
+  mostrarPantalla(categories);
 });
 
-// Accordion
+// ---- ACCORDION DE CATEGORÍAS ----
 const titles = document.querySelectorAll(".category-title");
 
 titles.forEach(title => {
@@ -25,6 +35,13 @@ titles.forEach(title => {
   });
 });
 
+// ---- IR A TEMA ----
 function irATema(nombreTema) {
-  window.location.href = `tema.html?tema=${nombreTema}`;
+  temaTitulo.textContent = nombreTema;
+  mostrarPantalla(tema);
+}
+
+// ---- VOLVER A CATEGORÍAS ----
+function volverACategorias() {
+  mostrarPantalla(categories);
 }
