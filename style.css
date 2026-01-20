@@ -223,7 +223,22 @@ button:active {
 /* ===================== */
 
 @media (max-width: 600px) {
+  .tema-container {
+    padding-top: 25px;
+  }
+
+  .tema-container h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
   .niveles {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .nivel {
+    padding: 16px 0;
+    font-size: 1.05rem;
   }
 }
