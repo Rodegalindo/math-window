@@ -5,27 +5,61 @@
   <title>Tema</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="tema-body">
 
-  <button onclick="window.location.href='index.html'">
+  <main class="tema-container">
+    <h1 id="titulo-tema"></h1>
+
+    <div class="niveles">
+      <!-- niveles 1 al 30 -->
+      <div class="nivel">1</div>
+      <div class="nivel">2</div>
+      <div class="nivel">3</div>
+      <div class="nivel">4</div>
+
+      <div class="nivel">5</div>
+      <div class="nivel">6</div>
+      <div class="nivel">7</div>
+      <div class="nivel">8</div>
+
+      <div class="nivel">9</div>
+      <div class="nivel">10</div>
+      <div class="nivel">11</div>
+      <div class="nivel">12</div>
+
+      <div class="nivel">13</div>
+      <div class="nivel">14</div>
+      <div class="nivel">15</div>
+      <div class="nivel">16</div>
+
+      <div class="nivel">17</div>
+      <div class="nivel">18</div>
+      <div class="nivel">19</div>
+      <div class="nivel">20</div>
+
+      <div class="nivel">21</div>
+      <div class="nivel">22</div>
+      <div class="nivel">23</div>
+      <div class="nivel">24</div>
+
+      <div class="nivel">25</div>
+      <div class="nivel">26</div>
+      <div class="nivel">27</div>
+      <div class="nivel">28</div>
+
+      <div class="nivel">29</div>
+      <div class="nivel">30</div>
+    </div>
+  </main>
+
+  <button class="btn-volver" onclick="window.location.href='index.html'">
     Volver
   </button>
-
-  <h1 id="titulo-tema"></h1>
-
-  <div class="niveles">
-    <!-- niveles 1 al 30 -->
-    <div class="nivel">1</div>
-    <div class="nivel">2</div>
-    <div class="nivel">3</div>
-    ...
-    <div class="nivel">30</div>
-  </div>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const tema = params.get('tema');
-    document.getElementById('titulo-tema').textContent = tema;
+    document.getElementById('titulo-tema').textContent = tema || 'Tema';
   </script>
 
 </body>
